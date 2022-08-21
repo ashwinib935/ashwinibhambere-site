@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-blog | ashwini</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navigation container">
+        <div class="nav-brand">AshwiniBhambere
+        </div>
+        <ul class="list-non-bulet nav-pills">
+            <li class="list-item-inline">
+                <a class="link" href="/index.html">Home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/projects.html">Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link link-active" href="/blogs.html">Blogs</a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="blog-container center-container">
+        <h1>How to Use the for Loop in JavaScript</h1>
+        <p>In this blog, we’ll learn about the for loop JavaScript provides. We’ll look at how for...in loop
+            statements are used in JavaScript, the syntax, examples of how it works, when to use or avoid it, and what
+            other types of loops we can use instead.</p>
+        <h2>Why Use For Loops in JavaScript Code</h2>
+        <p>In JavaScript, just as in other programming languages, we use loops to read or access the items of a
+            collection. The collection can be an array or an object. Every time the loop statement cycles through the
+            items in a collection, we call it an <strong>iteration</strong></p>
+
+        <p>There are two ways to access an item in a collection. The first way is via its key in the collection, which
+            is an index in an array or a property in an object. The second way is via the item itself, without needing
+            the key.</p>
+        <h2>Definition of the for…in Loop</h2>
+        <p>The JavaScript for loop goes through or iterates keys of a collection. Using these keys, you can then access
+            the item it represents in the collection.
+
+            The collection of items can be either arrays, objects, or even strings.
+
+        </p>
+        <h2>Syntax of the for…in Loop</h2>
+        <div class="blog">
+            <img  class="blog-img"src="/images/for-in-loop.PNG">
+        </div>
+        <p>In this code block, value is the collection of items we’re iterating over. It can be an object, array,
+            string, and so on. key will be the key of each item in value, changing on each iteration to the next key in
+            the list.</p>
+        <h2>Using the for Loop with Objects</h2>
+        <p>When using for...in loop to iterate an object in JavaScript, the iterated keys or properties — which, in the
+            snippet above, are represented by the key variable — are the object’s own properties.
+
+            As objects might inherit items through the prototype chain, which includes the default methods and
+            properties of Objects as well as Object prototypes we might define, we should then use hasOwnProperty.</p>
+        <h3>For loop example over an iterable object</h3>
+        <div class="blog">
+            <img  class="blog-img" src="/images/for-in-loop-obj.PNG">
+        </div>
+        <p>Notice that the order of the iteration is ascending for the keys (that is, starting with digits in numerical
+            order and then letters in alphabetical order). However, this outputted order is different from the index
+            order of the items as created when initializing the object.</p>
+        <h2>Using a for…in Loop with Arrays</h2>
+        <p>When using the for...in loop to iterate arrays in JavaScript, key in this case will be the indices of the
+            elements. However, the indices might be iterated in a random order.
+
+            So, if the value variable in the for...in loop syntax structure we showed above was an array of five items,
+            key would not be guaranteed to be 0 to 4. Some indices might precede others. </p>
+        <h3>For…in loop array example</h3>
+        <div class="blog">
+            <img class="blog-img" src="/images/for-in-loop-array.PNG">
+        </div>
+        <h2>When Not to Use a JavaScript for…in Loop</h2>
+        <h3>Orderly iterating of arrays</h3>
+        <p>As the index order in the iterations is not guaranteed when using the for...in loop, it’s recommended to not
+            iterate arrays if maintaining the order is necessary.
+
+            This is especially essential if you’re looking to support browsers like IE, which iterates in the order the
+            items are created rather than in the order of the indices. This is different from the way current modern
+            browsers work, which iterate arrays based on the indices in ascending order.
+
+            So, for example, if you have an array of four items and you insert an item into position three, in modern
+            browsers the for...in loop will still iterate the array in order from 0 to 4. In IE, when using a for...in
+            loop, it will iterate the four items that were originally in the array in the beginning and then reach the
+            item that was added at position three.</p>
+        <h3>Making changes while iterating</h3>
+        <p>Any addition, deletion, or modification to properties doesn’t guarantee an ordered iteration. Making changes
+            to properties in a for...in loop should be avoided. This is mostly due to its unordered nature.
+
+            So, if you delete an item before you reach it in the iteration, the item will not be visited at all in the
+            entire loop.
+
+            Similarly, if you make changes to a property, it doesn’t guarantee that the item won’t be revisited again.
+            So, if a property is changed it might be visited twice in the loop rather than once.
+
+            In addition, if a property is added during iteration, it might or might not be visited during the iteration
+            at all.
+
+            Due to these situations, it’s best to avoid making any alterations, deletions, or additions to an object in
+            a for...in loop.</p>
+        <h2>Conclusion</h2>
+        <p>By using the JavaScript for...in loop, we can loop through keys or properties of an object. It can be useful
+            when iterating object properties or for debugging, but should be avoided when iterating arrays or making
+            changes to the object. </p>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-heading">Social links</div>
+        <ul class="social-links list-non-bulet">
+            <li class="list-item-inline"> <a class="link" href="https://github.com/ashwinib935">Github</a></li>
+            <li class="list-item-inline"><a class="link" href="/">Twitter</a></li>
+            <li class="list-item-inline"><a class="link" href="/">Linkedin</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
