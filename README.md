@@ -1,8 +1,13 @@
 # Ashwinisite
-This is my personal portfolio 
+This is my personal portfolio. Which contains some details about me like social links,the project which I am working on and some technical and nontechnical blogs.
 
+# Tech stack used:
+ HTML
+ CSS
+ Javascript
 
-Now I know
-1. JavaScript
-1. NodeJS
-1. Repl.it
+# Hosted on
+Netlify
+
+# Preview
+
