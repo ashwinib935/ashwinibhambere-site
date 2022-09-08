@@ -253,7 +253,7 @@ hr {
     .project-link-button {
         display: block;
         margin: 1rem 0rem;
-        ;
+
     }
 
     .blog-container {
@@ -275,4 +275,7 @@ hr {
 
     }
 
+    .project-links {
+        margin: 2rem 0rem;
+    }
 }
